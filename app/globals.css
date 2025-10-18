@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
+/* --- ЕДИНАЯ ЦВЕТОВАЯ СХЕМА ДЛЯ ВСЕХ УСТРОЙСТВ --- */
 :root {
-  --background: #be5252;
-  --foreground: #269f13;
+  --background: #faf7f2; /* светлый фон */
+  --foreground: #111827; /* тёмный текст */
 }
 
+/* --- Тема Tailwind --- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,15 +14,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #f8f9fa;
-    --foreground: #997979;
-  }
-}
-
+/* --- Основные стили --- */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Можно добавить плавность переходов между секциями */
+html {
+  scroll-behavior: smooth;
 }

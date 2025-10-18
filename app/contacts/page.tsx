@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Phone, Mail } from "lucide-react";
+import { Instagram, MessageCircle, Phone } from "lucide-react";
 
 export default function ContactsPage() {
   return (
@@ -9,7 +9,7 @@ export default function ContactsPage() {
       </p>
 
       <div className="grid gap-6 mt-6 sm:grid-cols-2">
-        {/* Способы связи */}
+        {/* СПОСОБЫ СВЯЗИ */}
         <div className="rounded-2xl bg-white shadow-[0_10px_25px_rgba(0,0,0,.07)] p-6">
           <h3 className="font-semibold text-lg">Связаться</h3>
           <div className="mt-4 flex flex-col gap-3">
@@ -19,7 +19,8 @@ export default function ContactsPage() {
               target="_blank"
               rel="noreferrer"
             >
-              <MessageCircle size={18} /> Telegram: @shumskaya_hair
+              <MessageCircle size={18} />
+              Telegram: @shumskaya_hair
             </a>
 
             {/* Если есть WhatsApp — раскомментируй и поставь реальный номер в формате 37529XXXXXXX */}
@@ -38,33 +39,27 @@ export default function ContactsPage() {
               target="_blank"
               rel="noreferrer"
             >
-              <Instagram size={18} /> Instagram: @shumskaya_hair
+              <Instagram size={18} />
+              Instagram: @shumskaya_hair
             </a>
 
             <a
               className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-black/10 hover:bg-black/5"
               href="tel:+375290000000"
             >
-              <Phone size={18} /> +375 (29) 000-00-00
+              <Phone size={18} />
+              +375 (29) 000-00-00
             </a>
-
-            {/* Если используешь почту — замени адрес */}
-            {/* <a
-              className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-black/10 hover:bg-black/5"
-              href="mailto:hello@shumskaya-hair.by"
-            >
-              <Mail size={18} /> hello@shumskaya-hair.by
-            </a> */}
           </div>
         </div>
 
-        {/* Инфо/график */}
+        {/* ИНФО / ГРАФИК */}
         <div className="rounded-2xl bg-white shadow-[0_10px_25px_rgba(0,0,0,.07)] p-6">
           <h3 className="font-semibold text-lg">График и город</h3>
           <ul className="mt-3 space-y-2 text-black/80">
             <li>Город: Молодечно</li>
             <li>График: по записи</li>
-            <li>Учёт пожеланий по времени: утро/день/вечер</li>
+            <li>Возможны утренние и вечерние записи</li>
           </ul>
 
           {/* CTA */}

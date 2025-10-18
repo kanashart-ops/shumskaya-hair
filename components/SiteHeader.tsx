@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function SiteHeader() {
@@ -10,17 +11,17 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-black/5">
       <nav className="container mx-auto max-w-6xl px-4 flex h-16 items-center justify-between">
         {/* LOGO — крупнее и заметнее */}
-        <a href="/" className="font-extrabold tracking-tight text-[20px] sm:text-2xl">
+        <Link href="/" className="font-extrabold tracking-tight text-[20px] sm:text-2xl">
           Shumskaya Hair
-        </a>
+        </Link>
 
         {/* DESKTOP MENU */}
         <div className="hidden gap-4 sm:flex items-center">
-          <a className="hover:underline" href="/portfolio">Мои работы</a>
-          <a className="hover:underline" href="/info">Обо мне</a>
-          <a className="hover:underline" href="/reviews">Отзывы</a>
-          <a className="hover:underline" href="/contacts">Контакты</a>
-          <a className="hover:underline font-semibold text-[#f59e0b]" href="/booking">Запись</a>
+          <Link className="hover:underline" href="/portfolio">Мои работы</Link>
+          <Link className="hover:underline" href="/info">Обо мне</Link>
+          <Link className="hover:underline" href="/reviews">Отзывы</Link>
+          <Link className="hover:underline" href="/contacts">Контакты</Link>
+          <Link className="hover:underline font-semibold text-[#f59e0b]" href="/booking">Запись</Link>
           <a
             className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,.07)] bg-[#f59e0b] text-black hover:brightness-95"
             href="https://t.me/shumskaya_hair"
@@ -45,11 +46,11 @@ export default function SiteHeader() {
       {open && (
         <div className="sm:hidden border-t border-black/5 bg-white/95 backdrop-blur">
           <div className="container mx-auto max-w-6xl px-4 py-3 grid gap-2">
-            <a className="py-2" href="/portfolio" onClick={() => setOpen(false)}>Мои работы</a>
-            <a className="py-2" href="/info" onClick={() => setOpen(false)}>Обо мне</a>
-            <a className="py-2" href="/reviews" onClick={() => setOpen(false)}>Отзывы</a>
-            <a className="py-2" href="/contacts" onClick={() => setOpen(false)}>Контакты</a>
-            <a className="py-2 font-semibold text-[#f59e0b]" href="/booking" onClick={() => setOpen(false)}>Запись</a>
+            <Link className="py-2" href="/portfolio" onClick={() => setOpen(false)}>Мои работы</Link>
+            <Link className="py-2" href="/info" onClick={() => setOpen(false)}>Обо мне</Link>
+            <Link className="py-2" href="/reviews" onClick={() => setOpen(false)}>Отзывы</Link>
+            <Link className="py-2" href="/contacts" onClick={() => setOpen(false)}>Контакты</Link>
+            <Link className="py-2 font-semibold text-[#f59e0b]" href="/booking" onClick={() => setOpen(false)}>Запись</Link>
             <a
               className="mt-2 inline-flex items-center justify-center rounded-2xl px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,.07)] bg-[#f59e0b] text-black hover:brightness-95"
               href="https://t.me/shumskaya_hair"

@@ -1,103 +1,147 @@
-import Image from "next/image";
+"use client";
+import { Phone, Instagram, MessageCircle } from "lucide-react";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-4 grid gap-10 py-14 sm:grid-cols-2 sm:items-center">
+          {/* Текст */}
+          <div className="order-2 sm:order-1">
+            <p className="uppercase tracking-wide text-sm text-black/60">Мастер по наращиванию волос</p>
+            <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+              Наращивание волос в Молодечно
+            </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+            <p className="mt-4 text-lg text-black/80">
+              Редкие височные зоны? Нужна длина, а волосы не растут?{" "}
+              <b>Решу проблему за пару часов.</b> Капсулы <b>НЕ</b> тянут и не
+              сползают — комфорт и натуральный вид.
+            </p>
+
+            <div className="mt-6 grid gap-2">
+              <span className="inline-flex items-center rounded-full bg-[#fef3c7] px-3 py-1 text-sm">
+                15 лет в бьюти-сфере · преподаватель
+              </span>
+              <span className="inline-flex items-center rounded-full bg-[#fef3c7] px-3 py-1 text-sm">
+                Минский ГТК · художник-модельер
+              </span>
+              <span className="inline-flex items-center rounded-full bg-[#fef3c7] px-3 py-1 text-sm">
+                БНТУ + РИПО · преподаю новых парикмахеров
+              </span>
+              <span className="inline-flex items-center rounded-full bg-[#fef3c7] px-3 py-1 text-sm">
+                Обучение @perfecthairby — 5 недель
+              </span>
+            </div>
+
+            {/* Кнопки */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,.07)] bg-[#f59e0b] text-black hover:brightness-95"
+                href="/portfolio"
+              >
+                Мои работы
+              </a>
+              <a
+                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-black/10 hover:bg-black/5"
+                href="/info"
+              >
+                Информация
+              </a>
+            </div>
+
+            {/* Мессенджеры */}
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-black/10 hover:bg-black/5"
+                href="https://t.me/shumskaya_hair"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MessageCircle size={18} /> Telegram
+              </a>
+              <a
+                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-black/10 hover:bg-black/5"
+                href="https://instagram.com/shumskaya_hair"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Instagram size={18} /> Instagram
+              </a>
+              <a
+                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 border border-black/10 hover:bg-black/5"
+                href="tel:+375290000000"
+              >
+                <Phone size={18} /> Позвонить
+              </a>
+            </div>
+          </div>
+
+          {/* Фото Насти */}
+          <div className="order-1 sm:order-2">
+            <div
+              className="aspect-[4/5] w-full rounded-3xl bg-[url('/images/hero.jpg')] bg-cover bg-center shadow-[0_10px_25px_rgba(0,0,0,.07)]"
+              aria-label="Фото Насти"
             />
-            Deploy now
-          </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ прямо на главной */}
+      <section className="container mx-auto max-w-6xl px-4 mt-6">
+        <h2 className="text-2xl font-bold">Частые вопросы</h2>
+        <div className="mt-4 grid gap-4">
+          {[
+            {
+              q: "Сколько держатся капсулы?",
+              a: "В среднем 2–3 месяца до первой коррекции. Зависит от ухода и скорости роста волос.",
+            },
+            {
+              q: "Вредно ли наращивание?",
+              a: "При правильной постановке и уходе — нет. Использую деликатные капсулы без перегруза.",
+            },
+            {
+              q: "Можно ли красить и завивать?",
+              a: "Да, но аккуратно и избегая мест креплений. Уход — без масел на корнях.",
+            },
+            {
+              q: "Сколько времени занимает процедура?",
+              a: "Обычно 2–3 часа. Зависит от объёма и зон.",
+            },
+          ].map((item, i) => (
+            <details
+              key={i}
+              className="rounded-2xl bg-white shadow-[0_10px_25px_rgba(0,0,0,.07)] p-6"
+            >
+              <summary className="cursor-pointer font-semibold">
+                {item.q}
+              </summary>
+              <p className="mt-2 text-black/70">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container mx-auto max-w-6xl px-4 my-12">
+        <div className="rounded-2xl bg-white shadow-[0_10px_25px_rgba(0,0,0,.07)] p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h3 className="text-xl font-semibold">Хотите примерить длину и объём?</h3>
+            <p className="text-black/70">
+              Напишите в Telegram, пришлите фото — подскажу по объёму, длине и стоимости.
+            </p>
+          </div>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,.07)] bg-[#f59e0b] text-black hover:brightness-95"
+            href="https://t.me/shumskaya_hair"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
-            Read our docs
+            Консультация бесплатно
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }

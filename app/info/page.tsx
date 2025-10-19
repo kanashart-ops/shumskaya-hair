@@ -1,13 +1,13 @@
 export default function InfoPage() {
   return (
     <main className="relative container mx-auto max-w-6xl px-4 py-10">
-      {/* ФОНОВАЯ ФОТО НАСТИ — теперь более чёткая */}
+      {/* Фоновая фотография — виднее */}
       <div
-        className="absolute inset-0 bg-[url('/images/about/hero.jpg')] bg-cover bg-center opacity-40 pointer-events-none"
+        className="absolute inset-0 bg-[url('/images/about/hero.jpg')] bg-cover bg-center opacity-60 pointer-events-none"
         aria-hidden="true"
       />
-      {/* лёгкий белый фильтр для читаемости текста */}
-      <div className="absolute inset-0 bg-white/70 sm:bg-white/60 pointer-events-none" />
+      {/* Белый фильтр уменьшен для читаемости, но не «глушит» картинку */}
+      <div className="absolute inset-0 bg-white/40 sm:bg-white/30 pointer-events-none" />
 
       {/* КОНТЕНТ */}
       <div className="relative z-10">
@@ -55,16 +55,10 @@ export default function InfoPage() {
         </p>
 
         <div className="mt-10 grid gap-3 sm:flex">
-          <a
-            className="underline text-black/80 hover:text-black"
-            href="/portfolio"
-          >
+          <a className="underline text-black/80 hover:text-black" href="/portfolio">
             Смотреть мои работы →
           </a>
-          <a
-            className="underline text-black/80 hover:text-black"
-            href="/contacts"
-          >
+          <a className="underline text-black/80 hover:text-black" href="/contacts">
             Связаться со мной →
           </a>
         </div>

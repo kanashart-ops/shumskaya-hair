@@ -10,21 +10,31 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-black/5">
       <nav className="container mx-auto max-w-6xl px-4 flex h-16 items-center justify-between">
-        {/* LOGO — крупнее и заметнее */}
-        <Link href="/" className="font-extrabold tracking-tight text-[20px] sm:text-2xl">
+        {/* LOGO */}
+        <Link
+          href="/"
+          className="font-extrabold tracking-tight text-[20px] sm:text-2xl"
+        >
           Shumskaya Hair
         </Link>
 
         {/* DESKTOP MENU */}
         <div className="hidden gap-4 sm:flex items-center">
-          <Link className="hover:underline" href="/portfolio">Мои работы</Link>
-          <Link className="hover:underline" href="/info">Обо мне</Link>
-          <Link className="hover:underline" href="/reviews">Отзывы</Link>
-          <Link className="hover:underline" href="/contacts">Контакты</Link>
-          <Link className="hover:underline font-semibold text-[#f59e0b]" href="/booking">Запись</Link>
+          <Link className="hover:underline" href="/portfolio">
+            Мои работы
+          </Link>
+          <Link className="hover:underline" href="/info">
+            Обо мне
+          </Link>
+          <Link className="hover:underline" href="/reviews">
+            Отзывы
+          </Link>
+          <Link className="hover:underline" href="/contacts">
+            Контакты
+          </Link>
           <a
             className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,.07)] bg-[#f59e0b] text-black hover:brightness-95"
-            href="https://t.me/shumskaya_hair"
+            href="https://t.me/+375333507019"
             target="_blank"
             rel="noreferrer"
           >
@@ -32,7 +42,7 @@ export default function SiteHeader() {
           </a>
         </div>
 
-        {/* MOBILE: burger */}
+        {/* MOBILE BURGER */}
         <button
           className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-black/10"
           aria-label={open ? "Закрыть меню" : "Открыть меню"}
@@ -42,18 +52,41 @@ export default function SiteHeader() {
         </button>
       </nav>
 
-      {/* MOBILE MENU PANEL */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="sm:hidden border-t border-black/5 bg-white/95 backdrop-blur">
           <div className="container mx-auto max-w-6xl px-4 py-3 grid gap-2">
-            <Link className="py-2" href="/portfolio" onClick={() => setOpen(false)}>Мои работы</Link>
-            <Link className="py-2" href="/info" onClick={() => setOpen(false)}>Обо мне</Link>
-            <Link className="py-2" href="/reviews" onClick={() => setOpen(false)}>Отзывы</Link>
-            <Link className="py-2" href="/contacts" onClick={() => setOpen(false)}>Контакты</Link>
-            <Link className="py-2 font-semibold text-[#f59e0b]" href="/booking" onClick={() => setOpen(false)}>Запись</Link>
+            <Link
+              className="py-2"
+              href="/portfolio"
+              onClick={() => setOpen(false)}
+            >
+              Мои работы
+            </Link>
+            <Link
+              className="py-2"
+              href="/info"
+              onClick={() => setOpen(false)}
+            >
+              Обо мне
+            </Link>
+            <Link
+              className="py-2"
+              href="/reviews"
+              onClick={() => setOpen(false)}
+            >
+              Отзывы
+            </Link>
+            <Link
+              className="py-2"
+              href="/contacts"
+              onClick={() => setOpen(false)}
+            >
+              Контакты
+            </Link>
             <a
               className="mt-2 inline-flex items-center justify-center rounded-2xl px-5 py-3 shadow-[0_10px_25px_rgba(0,0,0,.07)] bg-[#f59e0b] text-black hover:brightness-95"
-              href="https://t.me/shumskaya_hair"
+              href="https://t.me/+375333507019"
               target="_blank"
               rel="noreferrer"
               onClick={() => setOpen(false)}
